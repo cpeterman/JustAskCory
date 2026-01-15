@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just Call Cory | Your Local Helping Hand</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .wave-pattern {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M30 30c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      .card-hover {
+        transition: all 0.35s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-6px);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50">
+    <!-- NAVIGATION -->
+    <nav class="bg-white shadow sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center">
+          <img
+            src="logo_header.png"
+            alt="Just Call Cory Logo"
+            class="h-12 sm:h-14 md:h-16 w-auto"
+          />
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-4">
+          <a
+            href="#services"
+            class="px-5 py-2 rounded-full border border-blue-600 text-blue-600 font-medium hover:bg-blue-50 transition"
+          >
+            Services
+          </a>
+
+          <a
+            href="#contact"
+            class="px-5 py-2 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
+          >
+            Contact
+          </a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button class="md:hidden p-2" onclick="toggleMenu()" aria-label="Toggle menu">
+          <svg
+            class="w-6 h-6 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden px-4 pb-4 space-y-3 bg-white border-t border-gray-200"
+      >
+        <a href="#services" class="block py-3 font-semibold hover:text-blue-600 hover:bg-gray-50 px-3 rounded transition" onclick="toggleMenu()">Services</a>
+        <a href="#contact" class="block py-3 font-semibold hover:text-blue-600 hover:bg-gray-50 px-3 rounded transition" onclick="toggleMenu()">Contact</a>
+
+        <a
+          href="tel:5555555555"
+          class="block bg-blue-600 text-white px-4 py-3 rounded-full text-center font-medium hover:bg-blue-700 transition"
+        >
+          📞 Call Cory
+        </a>
+
+        <a
+          href="sms:5555555555"
+          class="block bg-orange-500 text-white px-4 py-3 rounded-full text-center font-medium hover:bg-orange-600 transition"
+        >
+          💬 Text Cory
+        </a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section
+      id="home"
+      class="bg-gradient-to-br from-blue-600 to-blue-800 wave-pattern text-white py-12 sm:py-16 md:py-20 px-4 sm:px-6"
+    >
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+          <!-- LEFT: TEXT -->
+          <div class="text-center md:text-left">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 sm:mb-6">
+              Just Call Cory
+            </h1>
+
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-6">
+              Your
+              <span class="text-orange-400 font-bold">Local Helping Hand</span>
+            </p>
+
+            <p class="text-base sm:text-lg md:text-xl text-blue-100 max-w-xl mx-auto md:mx-0 mb-8 sm:mb-10">
+              I'm Cory — your local helping hand. This is a family-owned
+              business, and when you call, you're getting help from me and my
+              family. We work together to handle home projects, yard work, VHS
+              transfers, and everyday tasks with care, honesty, and reliability.
+            </p>
+          </div>
+
+          <!-- RIGHT: LOGO -->
+          <div class="flex justify-center">
+            <img
+              src="logo_big.png"
+              alt="Just Call Cory Logo"
+              class="w-64 sm:w-72 md:w-80 lg:w-96"
+            />
+          </div>
+        </div>
+        <div class="mt-8 sm:mt-12 flex justify-center">
+          <p class="text-sm sm:text-base text-blue-200 text-center">
+            Family-owned • Local • Faith-driven • Reliable
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-10 sm:mb-12 md:mb-16">
+          How We <span class="text-orange-500">Can Help</span>
+        </h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div class="card-hover bg-orange-50 rounded-2xl p-6 sm:p-8 shadow">
+            <div class="text-4xl mb-4">🔧</div>
+            <h3 class="font-bold text-lg sm:text-xl mb-3">Home Projects</h3>
+            <p class="text-sm text-gray-700">
+              From small repairs to larger projects, our family works together
+              to get things done right the first time.
+            </p>
+          </div>
+
+          <div class="card-hover bg-green-50 rounded-2xl p-6 sm:p-8 shadow">
+            <div class="text-4xl mb-4">🌾</div>
+            <h3 class="font-bold text-lg sm:text-xl mb-3">Yard & Lawn Care</h3>
+            <p class="text-sm text-gray-700">
+              Reliable yard and outdoor help from a family that takes pride in
+              doing honest work.
+            </p>
+          </div>
+
+          <div class="card-hover bg-blue-50 rounded-2xl p-6 sm:p-8 shadow">
+            <div class="text-4xl mb-4">🤝</div>
+            <h3 class="font-bold text-lg sm:text-xl mb-3">General Help</h3>
+            <p class="text-sm text-gray-700">
+              When you're not sure who to call, our family is ready to help
+              however we can.
+            </p>
+          </div>
+
+          <div class="card-hover bg-purple-50 rounded-2xl p-6 sm:p-8 shadow">
+            <div class="text-4xl mb-4">📼</div>
+            <h3 class="font-bold text-lg sm:text-xl mb-3">VHS Transfers</h3>
+            <p class="text-sm text-gray-700">
+              Preserve family memories by converting tapes to digital.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section
+      id="contact"
+      class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white"
+    >
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get in Touch</h2>
+
+        <p class="text-sm sm:text-base text-blue-100 mb-8 sm:mb-12 px-4">
+          Reach out anytime. You'll be working directly with me, and when
+          needed, my family helps make sure the job gets done right.
+        </p>
+
+        <!-- Contact Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <!-- Phone -->
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+            <p class="text-xs sm:text-sm uppercase tracking-wide text-blue-200 mb-2">
+              Phone
+            </p>
+            <a
+              href="tel:5555555555"
+              class="text-xl sm:text-2xl font-semibold hover:text-orange-300 transition block"
+            >
+              (555) 555-5555
+            </a>
+          </div>
+
+          <!-- Email -->
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+            <p class="text-xs sm:text-sm uppercase tracking-wide text-blue-200 mb-2">
+              Email
+            </p>
+            <a
+              href="mailto:hello@justcallcory.com"
+              class="text-lg sm:text-xl md:text-2xl font-semibold hover:text-orange-300 transition break-all block"
+            >
+              hello@justcallcory.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-6 sm:py-8 text-center text-xs sm:text-sm">
+      © 2025 Just Call Cory
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
