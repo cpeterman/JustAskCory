@@ -19,40 +19,7 @@
 <body class="bg-gray-50 text-gray-900">
 
 <!-- HEADER -->
-<header id="site-header" class="bg-white sticky top-0 z-50 border-b border-gray-200 transition-shadow">
-  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-
-    <div class="flex items-center gap-3">
-      <img src="assets/logos/logo-icon.png" class="w-9 h-9" alt="Just Ask Cory Logo">
-      <span class="font-bold text-lg tracking-tight">Just Ask Cory</span>
-    </div>
-
-    <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
-      <a href="projects.html" class="nav-link">Projects</a>
-      <a href="media.html" class="nav-link">Media</a>
-      <a href="#contact" class="ml-2 bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600">
-        Get Help
-      </a>
-    </nav>
-
-    <button id="menu-btn" type="button" aria-label="Toggle mobile menu" class="md:hidden w-10 h-10 rounded-lg hover:bg-gray-100 flex items-center justify-center">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-  </div>
-
-  <div id="mobile-menu" class="md:hidden hidden border-t bg-white">
-    <nav class="px-6 py-4 space-y-4 text-sm font-semibold">
-      <a href="projects.html" class="block nav-link">Projects</a>
-      <a href="media.html" class="block nav-link">Media</a>
-      <a href="#contact" class="block text-center bg-orange-500 text-white py-3 rounded-full">
-        Get Help
-      </a>
-    </nav>
-  </div>
-</header>
+<div id="header"></div>
 
 <div class="h-1 bg-gradient-to-r from-blue-600 to-blue-800"></div>
 
@@ -137,26 +104,44 @@
   </div>
 </section>
 
-<footer class="bg-black text-gray-500 text-center py-6 text-sm">
-  © 2025 Just Ask Cory. Family-owned and local.
-</footer>
+<div id="footer"></div>
 
 <script>
-  // Mobile menu
-  document.getElementById('menu-btn').onclick = () =>
-    document.getElementById('mobile-menu').classList.toggle('hidden');
+  async function loadPartial(id, file) {
+    const res = await fetch(file);
+    const html = await res.text();
+    document.getElementById(id).innerHTML = html;
+  }
 
-  // Active nav
-  const path = location.pathname.split('/').pop();
-  document.querySelectorAll('.nav-link').forEach(link => {
-    if (link.getAttribute('href') === path) link.classList.add('active');
-  });
+  async function initSite() {
+    await loadPartial('header', 'partials/header.html');
+    await loadPartial('footer', 'partials/footer.html');
 
-  // Sticky shadow
-  const header = document.getElementById('site-header');
-  window.addEventListener('scroll', () =>
-    header.classList.toggle('shadow-md', window.scrollY > 10)
-  );
+    // Mobile menu
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+
+    // Active nav
+    const path = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
+
+    // Sticky shadow
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header?.classList.toggle('shadow-md', window.scrollY > 10);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initSite);
 </script>
 
 </body>
