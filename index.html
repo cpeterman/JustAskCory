@@ -1,170 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Just Ask Cory | Your Local Helping Hand</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just Ask Cory | Your Local Helping Hand</title>
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        body { font-family: 'Poppins', sans-serif; }
-        .card-hover { transition: all .35s ease; }
-        .card-hover:hover { transform: translateY(-6px); }
-        .float { animation: float 8s ease-in-out infinite; }
-        @keyframes float {
-            0%,100%{transform:translateY(0)}
-            50%{transform:translateY(-10px)}
-        }
-    </style>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-white text-gray-900">
 
-<!-- NAV -->
-<nav class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-        <div class="flex items-center space-x-3">
-            <img src="logo-icon.png" alt="Just Ask Cory" class="w-14 h-14">
-            <div>
-                <div class="text-xl font-bold">Just Ask Cory</div>
-                <div class="text-xs text-gray-500">Your Local Helping Hand</div>
-            </div>
-        </div>
-        <div class="hidden md:flex space-x-8 font-medium">
-            <a href="#home" class="hover:text-orange-500">Home</a>
-            <a href="#services" class="hover:text-orange-500">Services</a>
-            <a href="#about" class="hover:text-orange-500">About</a>
-            <a href="#contact" class="bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600">Get Help</a>
-        </div>
+<!-- HEADER -->
+<header class="border-b">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <img src="logo-icon.png" class="w-12 h-12" alt="Just Ask Cory">
+      <div>
+        <div class="font-bold text-lg">Just Ask Cory</div>
+        <div class="text-xs text-gray-500">Your Local Helping Hand</div>
+      </div>
     </div>
-</nav>
+    <nav class="hidden md:flex gap-8 font-medium">
+      <a href="#services" class="hover:text-orange-600">Services</a>
+      <a href="#about" class="hover:text-orange-600">About</a>
+      <a href="#contact" class="hover:text-orange-600">Contact</a>
+    </nav>
+  </div>
+</header>
 
-<!-- HERO -->
-<section id="home" class="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-24 text-center relative overflow-hidden">
-    <div class="absolute w-32 h-32 bg-orange-400 rounded-full opacity-20 top-16 left-10 float"></div>
-    <div class="absolute w-24 h-24 bg-white rounded-full opacity-10 bottom-20 right-16 float"></div>
+<!-- HERO (SPLIT LAYOUT) -->
+<section class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+  <div>
+    <h1 class="text-5xl font-extrabold leading-tight mb-6">
+      Reliable Help From <br>
+      <span class="text-orange-600">Someone You Trust</span>
+    </h1>
+    <p class="text-lg text-gray-700 mb-8">
+      Just Ask Cory is a family-owned local business helping neighbors with home projects, lawn care, media services, and everyday needs.
+    </p>
 
-    <div class="max-w-4xl mx-auto px-6 relative z-10">
-        <img src="logo.png" alt="Just Ask Cory Logo" class="mx-auto mb-8 max-w-xs">
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Your Local Helping Hand</h1>
-        <p class="text-xl text-blue-100 mb-10">
-            We’re a family-owned local business built on trust, hard work, and helping our neighbors with the everyday things that matter.
-        </p>
-        <div class="flex justify-center gap-4 flex-wrap">
-            <a href="#services" class="bg-orange-500 px-8 py-4 rounded-full font-bold hover:bg-orange-600">
-                See How We Help
-            </a>
-            <a href="#contact" class="border-2 border-white px-8 py-4 rounded-full hover:bg-white hover:text-blue-700">
-                Contact Cory
-            </a>
-        </div>
+    <div class="flex gap-4">
+      <a href="#contact" class="bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700">
+        Get Help Today
+      </a>
+      <a href="#services" class="border border-gray-300 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100">
+        View Services
+      </a>
     </div>
+
+    <div class="mt-8 text-sm text-gray-500">
+      ✔ Family-owned &nbsp; ✔ Local &nbsp; ✔ Honest work
+    </div>
+  </div>
+
+  <div class="bg-gray-100 rounded-2xl p-10 flex justify-center">
+    <img src="logo.png" alt="Just Ask Cory Logo" class="max-w-sm">
+  </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12">
-            How Our Family Helps Yours
-        </h2>
+<!-- SERVICES (LIST-FIRST, NOT CARDS) -->
+<section id="services" class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12">Services</h2>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="grid md:grid-cols-2 gap-10">
 
-            <div class="card-hover p-8 rounded-2xl bg-orange-50 border-l-4 border-orange-500">
-                <h3 class="text-2xl font-bold mb-4">🔧 Home Services</h3>
-                <p class="mb-4">Repairs, installs, and projects done right.</p>
-                <ul class="text-sm space-y-1">
-                    <li>• Home repairs</li>
-                    <li>• Assembly & installs</li>
-                    <li>• Small projects</li>
-                </ul>
-            </div>
+      <div class="bg-white p-8 rounded-xl border">
+        <h3 class="text-2xl font-bold mb-4">🔧 Home Services</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Repairs & small projects</li>
+          <li>• Assembly & installation</li>
+          <li>• General help around the house</li>
+        </ul>
+      </div>
 
-            <div class="card-hover p-8 rounded-2xl bg-green-50 border-l-4 border-green-500">
-                <h3 class="text-2xl font-bold mb-4">🌱 Healthy Living</h3>
-                <p class="mb-4">Simple tips for healthier family living.</p>
-                <ul class="text-sm space-y-1">
-                    <li>• Wellness guidance</li>
-                    <li>• Healthy habits</li>
-                    <li>• Lifestyle support</li>
-                </ul>
-            </div>
+      <div class="bg-white p-8 rounded-xl border">
+        <h3 class="text-2xl font-bold mb-4">🌾 Lawn Care</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Mowing & edging</li>
+          <li>• Seasonal cleanup</li>
+          <li>• Ongoing maintenance</li>
+        </ul>
+      </div>
 
-            <div class="card-hover p-8 rounded-2xl bg-emerald-50 border-l-4 border-emerald-500">
-                <h3 class="text-2xl font-bold mb-4">🌾 Lawn Care</h3>
-                <p class="mb-4">Yard care like it’s our own.</p>
-                <ul class="text-sm space-y-1">
-                    <li>• Mowing & edging</li>
-                    <li>• Cleanup</li>
-                    <li>• Maintenance</li>
-                </ul>
-            </div>
+      <div class="bg-white p-8 rounded-xl border">
+        <h3 class="text-2xl font-bold mb-4">📼 Media Services</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• VHS to digital conversion</li>
+          <li>• Memory preservation</li>
+          <li>• Careful, local handling</li>
+        </ul>
+      </div>
 
-            <div class="card-hover p-8 rounded-2xl bg-purple-50 border-l-4 border-purple-500">
-                <h3 class="text-2xl font-bold mb-4">📼 Media Services</h3>
-                <p class="mb-4">Preserve family memories.</p>
-                <ul class="text-sm space-y-1">
-                    <li>• VHS to digital</li>
-                    <li>• Safe handling</li>
-                    <li>• Quality transfers</li>
-                </ul>
-            </div>
+      <div class="bg-white p-8 rounded-xl border">
+        <h3 class="text-2xl font-bold mb-4">🌱 Healthy Living</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Simple wellness guidance</li>
+          <li>• Family-focused habits</li>
+          <li>• Lifestyle support</li>
+        </ul>
+      </div>
 
-        </div>
-
-        <p class="text-center text-sm text-gray-500 mt-12">
-            Services vary by availability. If you don’t see what you need — just ask.
-        </p>
     </div>
+
+    <p class="text-sm text-gray-500 mt-10">
+      Services vary by availability. If you don’t see what you need — just ask.
+    </p>
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="py-20 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-6">About Just Ask Cory</h2>
-        <p class="text-lg text-gray-700">
-            Just Ask Cory is a family-run local business built on honesty, reliability, and treating people right.
-            We believe neighbors should help neighbors — and that’s exactly what we do.
-        </p>
-    </div>
+<!-- ABOUT (TRUST-FOCUSED) -->
+<section id="about" class="py-20">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-6">About Our Family Business</h2>
+    <p class="text-lg text-gray-700 leading-relaxed">
+      Just Ask Cory was built on the idea that neighbors should be able to rely on each other.
+      We’re a family-run business that values honesty, reliability, and doing the job right.
+      When you reach out, you’re talking to real people — not a call center.
+    </p>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-    <div class="max-w-xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-8">Get in Touch</h2>
+<!-- CONTACT (SIMPLE + TRUST) -->
+<section id="contact" class="bg-gray-900 text-white py-20">
+  <div class="max-w-xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-8">Contact Cory</h2>
 
-        <form action="https://api.web3forms.com/submit" method="POST" class="bg-white text-gray-800 p-8 rounded-2xl shadow-xl space-y-6">
-            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
 
-            <input class="w-full border p-3 rounded" name="name" placeholder="Your Name" required>
-            <input class="w-full border p-3 rounded" name="email" placeholder="Email" required>
-            <textarea class="w-full border p-3 rounded" name="message" placeholder="How can we help?" required></textarea>
+      <input class="w-full p-4 rounded text-gray-900" name="name" placeholder="Your Name" required>
+      <input class="w-full p-4 rounded text-gray-900" name="email" placeholder="Email" required>
+      <textarea class="w-full p-4 rounded text-gray-900" name="message" rows="4" placeholder="How can we help?" required></textarea>
 
-            <button class="w-full bg-orange-500 text-white py-3 rounded font-bold hover:bg-orange-600">
-                Send Message
-            </button>
+      <button class="w-full bg-orange-600 py-4 rounded font-semibold hover:bg-orange-700">
+        Send Message
+      </button>
 
-            <p class="text-xs text-center text-gray-500">
-                Local. Family-owned. We respond personally.
-            </p>
-        </form>
-    </div>
+      <p class="text-sm text-gray-400 text-center">
+        Local. Family-owned. We respond personally.
+      </p>
+    </form>
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-gray-900 text-gray-400 py-8 text-center">
-    © 2025 Just Ask Cory. Family-owned and proudly local.
+<footer class="bg-black text-gray-500 py-6 text-center text-sm">
+  © 2025 Just Ask Cory. Proudly family-owned and local.
 </footer>
 
 </body>
