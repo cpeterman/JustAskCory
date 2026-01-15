@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Just Ask Cory | Your Local Helping Hand</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style> body { font-family: Inter, sans-serif; } </style>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
 
 <body class="bg-gray-50 text-gray-900">
@@ -15,13 +19,15 @@
 <header class="bg-white border-b sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
     <div class="flex items-center gap-3">
-      <img src="assets/logos/logo-icon.png" class="w-10 h-10">
+      <img src="assets/logos/logo-icon.png" class="w-10 h-10" alt="Just Ask Cory">
       <span class="font-bold text-lg">Just Ask Cory</span>
     </div>
     <nav class="flex gap-6 text-sm font-semibold">
       <a href="projects.html">Projects</a>
       <a href="media.html">Media</a>
-      <a href="#contact" class="bg-orange-500 text-white px-4 py-2 rounded-full">Get Help</a>
+      <a href="#contact" class="bg-orange-500 text-white px-4 py-2 rounded-full">
+        Get Help
+      </a>
     </nav>
   </div>
 </header>
@@ -30,18 +36,19 @@
 <section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
   <div class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
 
-    <!-- LEFT TEXT -->
+    <!-- LEFT -->
     <div>
       <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
-        Trusted Help for Your Home<br>
+        Reliable Help for Your Home<br>
         <span class="text-orange-400">From Someone Local</span>
       </h1>
       <p class="text-blue-100 text-lg mb-8">
-        Family-owned services for home projects, lawn care, and modern home technology.
+        We’re a family-owned local business helping neighbors with home services,
+        lawn care, and modern home technology.
       </p>
       <div class="flex gap-4">
-        <a href="projects.html" class="bg-orange-500 px-6 py-3 rounded-full font-bold">
-          View Our Work
+        <a href="#services" class="bg-orange-500 px-6 py-3 rounded-full font-bold">
+          View Services
         </a>
         <a href="#contact" class="border border-white px-6 py-3 rounded-full">
           Contact Cory
@@ -49,48 +56,117 @@
       </div>
     </div>
 
-    <!-- RIGHT LOGO -->
+    <!-- RIGHT -->
     <div class="flex justify-center">
-      <img src="assets/logos/logo.png" class="max-w-sm">
+      <img src="assets/logos/logo.png" class="max-w-sm" alt="Just Ask Cory logo">
     </div>
 
   </div>
 </section>
 
-<!-- SERVICES SUMMARY -->
-<section class="py-16 bg-white">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+<!-- SERVICES -->
+<section id="services" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-16">
+      How We Can Help
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- HOME SERVICES -->
+      <div class="bg-gray-50 rounded-2xl p-8 border-t-4 border-orange-500">
+        <h3 class="text-2xl font-bold text-blue-700 mb-4">🔧 Home Services</h3>
+        <p class="text-gray-700 mb-4">
+          Dependable help for projects and repairs around your home.
+        </p>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Repairs & small projects</li>
+          <li>• Assembly & installation</li>
+          <li>• Mounting TVs, shelves, fixtures</li>
+          <li>• General home help</li>
+        </ul>
+      </div>
+
+      <!-- LAWN CARE -->
+      <div class="bg-gray-50 rounded-2xl p-8 border-t-4 border-green-500">
+        <h3 class="text-2xl font-bold text-green-700 mb-4">🌾 Lawn Care</h3>
+        <p class="text-gray-700 mb-4">
+          Consistent, honest lawn care from someone local.
+        </p>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Mowing & edging</li>
+          <li>• Seasonal cleanup</li>
+          <li>• Yard maintenance</li>
+        </ul>
+      </div>
+
+      <!-- MEDIA SERVICES -->
+      <div class="bg-gray-50 rounded-2xl p-8 border-t-4 border-blue-500">
+        <h3 class="text-2xl font-bold text-blue-800 mb-4">📡 Media Services</h3>
+        <p class="text-gray-700 mb-4">
+          Modern home tech setup done cleanly and correctly.
+        </p>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Wi-Fi & home networking</li>
+          <li>• Security camera installation</li>
+          <li>• Home theater & TV setup</li>
+          <li>• Clean cable management</li>
+        </ul>
+        <a href="media.html" class="inline-block mt-4 text-orange-600 font-semibold">
+          See media projects →
+        </a>
+      </div>
+
+    </div>
+
+    <p class="text-center text-sm text-gray-500 mt-12">
+      Services vary by availability. If you don’t see what you need — just ask.
+    </p>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="bg-blue-50 py-12">
+  <div class="max-w-7xl mx-auto px-6 grid sm:grid-cols-3 gap-8 text-center">
     <div>
-      <h3 class="font-bold text-xl text-blue-700">Home Services</h3>
-      <p class="text-gray-600">Repairs, installs, and everyday projects</p>
+      <div class="text-orange-500 font-bold text-xl">Family-Owned</div>
+      <p class="text-gray-600 text-sm">Local people you can trust</p>
     </div>
     <div>
-      <h3 class="font-bold text-xl text-green-700">Lawn Care</h3>
-      <p class="text-gray-600">Reliable maintenance & cleanup</p>
+      <div class="text-orange-500 font-bold text-xl">Honest Work</div>
+      <p class="text-gray-600 text-sm">No upselling, no nonsense</p>
     </div>
     <div>
-      <h3 class="font-bold text-xl text-blue-800">Media & Tech</h3>
-      <p class="text-gray-600">Wi-Fi, cameras, home theater</p>
+      <div class="text-orange-500 font-bold text-xl">Personal Service</div>
+      <p class="text-gray-600 text-sm">You deal directly with us</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="bg-gray-900 text-white py-16">
-  <div class="max-w-lg mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-6 text-center">Get in Touch</h2>
+<section id="contact" class="bg-gray-900 text-white py-20">
+  <div class="max-w-lg mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
+
     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
       <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-      <input class="w-full p-4 rounded text-gray-900" name="name" placeholder="Name" required>
+      <input class="w-full p-4 rounded text-gray-900" name="name" placeholder="Your Name" required>
       <input class="w-full p-4 rounded text-gray-900" name="email" placeholder="Email" required>
       <textarea class="w-full p-4 rounded text-gray-900" name="message" rows="4" placeholder="How can we help?" required></textarea>
-      <button class="w-full bg-orange-500 py-4 rounded font-bold">Send Message</button>
+
+      <button class="w-full bg-orange-500 py-4 rounded font-bold hover:bg-orange-600">
+        Send Message
+      </button>
+
+      <p class="text-xs text-gray-400 text-center">
+        Local. Family-owned. We respond personally.
+      </p>
     </form>
   </div>
 </section>
 
 <footer class="bg-black text-gray-500 text-center py-6 text-sm">
-  © 2025 Just Ask Cory. Family-owned and local.
+  © 2025 Just Ask Cory. Proudly family-owned and local.
 </footer>
 
 </body>
