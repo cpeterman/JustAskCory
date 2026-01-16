@@ -1,210 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Just Ask Cory | Your Local Helping Hand</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just Ask Cory | Your Local Helping Hand</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      body {
-        font-family: Inter, sans-serif;
-      }
-      .nav-link {
-        color: #374151;
-        transition: 0.2s;
-      }
-      .nav-link:hover {
-        color: #2563eb;
-      }
-      .nav-link.active {
-        color: #2563eb;
-        font-weight: 700;
-      }
-    </style>
-  </head>
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <body class="bg-gray-50 text-gray-900">
-    <!-- HEADER -->
-    <div id="header"></div>
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <div class="h-1 bg-gradient-to-r from-blue-600 to-blue-800"></div>
+  <!-- Page identity -->
+  <script>
+    window.PAGE_ID = 'home';
+  </script>
 
-    <!-- HERO -->
-    <section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-      <div
-        class="max-w-[1200px] mx-auto px-6 py-12 md:py-16 grid lg:grid-cols-2 gap-8 items-center"
-      >
-        <!-- LEFT: TEXT -->
-        <div>
-          <h1
-            class="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-tight mb-6"
-          >
-            <span class="block">Reliable Help for Your Home</span>
-            <span class="block text-orange-400">From Someone Local</span>
-          </h1>
+  <style>
+    body { font-family: Inter, sans-serif; }
 
-          <p class="text-blue-100 text-lg mb-8 max-w-xl">
-            Family-owned local services for home projects, lawn care, and modern
-            home technology.
-          </p>
+    .nav-link {
+      color: #374151;
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover {
+      color: #2563eb;
+    }
+    .nav-link.active {
+      color: #2563eb;
+      font-weight: 700;
+    }
+  </style>
+</head>
 
-          <div class="flex flex-wrap gap-4">
-            <a
-              href="#services"
-              class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-bold transition"
-            >
-              View Services
-            </a>
-            <a
-              href="#contact"
-              class="border border-white/70 hover:bg-white hover:text-blue-700 px-6 py-3 rounded-full font-semibold transition"
-            >
-              Contact Cory
-            </a>
-          </div>
-        </div>
+<body class="bg-gray-50 text-gray-900">
 
-        <!-- RIGHT: LOGO -->
-        <div class="relative flex justify-center lg:justify-end">
-          <!-- Soft halo -->
-          <div
-            class="absolute w-72 h-72 rounded-full bg-white/10 blur-3xl"
-          ></div>
+<!-- HEADER (Loaded via partial) -->
+<div id="header"></div>
 
-          <img
-            src="assets/logos/logo.png"
-            alt="Just Ask Cory Logo"
-            class="relative max-w-[280px] md:max-w-[320px] lg:max-w-[360px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] rounded-2xl"
-          />
-        </div>
-      </div>
-    </section>
+<!-- HERO -->
+<section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+  <div class="max-w-7xl mx-auto px-6 py-12 md:py-16
+              grid lg:grid-cols-2 gap-8 items-center
+              text-center lg:text-left">
 
-    <!-- SERVICES -->
-    <section id="services" class="py-16 md:py-20 bg-white">
-      <div class="max-w-[1200px] mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-16">How We Can Help</h2>
+    <!-- LEFT: TEXT -->
+    <div class="flex flex-col items-center lg:items-start">
+      <h1 class="font-extrabold leading-tight mb-6
+                 text-3xl md:text-4xl lg:text-5xl">
+        <span class="block whitespace-nowrap">
+          Reliable Help for Your Home
+        </span>
+        <span class="block text-orange-400 whitespace-nowrap">
+          From Someone Local
+        </span>
+      </h1>
 
-        <div class="grid md:grid-cols-3 gap-10">
-          <div class="bg-gray-50 p-8 rounded-2xl border-t-4 border-orange-500">
-            <h3 class="text-2xl font-bold text-blue-700 mb-4">
-              🔧 Home Services
-            </h3>
-            <ul class="space-y-2 text-gray-600">
-              <li>• Repairs & small projects</li>
-              <li>• Assembly & installation</li>
-              <li>• Mounting & fixtures</li>
-              <li>• General home help</li>
-            </ul>
-          </div>
+      <p class="text-blue-100 text-lg mb-8 max-w-xl">
+        A family-owned local business working together to help with
+        home projects, lawn care, and modern home technology.
+      </p>
 
-          <div class="bg-gray-50 p-8 rounded-2xl border-t-4 border-green-500">
-            <h3 class="text-2xl font-bold text-green-700 mb-4">🌾 Lawn Care</h3>
-            <ul class="space-y-2 text-gray-600">
-              <li>• Mowing & edging</li>
-              <li>• Seasonal cleanup</li>
-              <li>• Yard maintenance</li>
-            </ul>
-          </div>
-
-          <div class="bg-gray-50 p-8 rounded-2xl border-t-4 border-blue-500">
-            <h3 class="text-2xl font-bold text-blue-800 mb-4">
-              📡 Media Services
-            </h3>
-            <ul class="space-y-2 text-gray-600">
-              <li>• Wi-Fi & networking</li>
-              <li>• Security cameras</li>
-              <li>• Home theater setup</li>
-              <li>• Clean cable management</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="bg-gray-900 text-white py-16">
-      <div class="max-w-lg mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-6 text-center">Get in Touch</h2>
-        <form
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          class="space-y-4"
+      <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+        <a
+          href="#services"
+          class="bg-orange-500 hover:bg-orange-600 text-white
+                 px-6 py-3 rounded-full font-bold transition"
         >
-          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
-          <input
-            class="w-full p-4 rounded text-gray-900"
-            name="name"
-            placeholder="Name"
-            required
-          />
-          <input
-            class="w-full p-4 rounded text-gray-900"
-            name="email"
-            placeholder="Email"
-            required
-          />
-          <textarea
-            class="w-full p-4 rounded text-gray-900"
-            name="message"
-            rows="4"
-            placeholder="How can we help?"
-            required
-          ></textarea>
-          <button
-            type="submit"
-            class="w-full bg-orange-500 py-4 rounded font-bold"
-          >
-            Send Message
-          </button>
-        </form>
+          View Services
+        </a>
+        <a
+          href="#contact"
+          class="border border-white/70 hover:bg-white hover:text-blue-700
+                 px-6 py-3 rounded-full font-semibold transition"
+        >
+          Contact Our Family
+        </a>
       </div>
-    </section>
+    </div>
 
-    <div id="footer"></div>
+    <!-- RIGHT: LOGO -->
+    <div class="relative flex justify-center lg:justify-end mt-10 lg:mt-0">
+      <div class="absolute w-72 h-72 rounded-full bg-white/10 blur-3xl"></div>
+      <img
+        src="assets/logos/logo.png"
+        alt="Just Ask Cory Logo"
+        class="relative max-w-[260px] md:max-w-[300px] lg:max-w-[360px]
+               drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)]"
+      >
+    </div>
 
-    <script>
-      async function loadPartial(id, file) {
-        const res = await fetch(file);
-        const html = await res.text();
-        document.getElementById(id).innerHTML = html;
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="pt-8 md:pt-12 pb-16 md:pb-20 bg-white">
+  <div class="max-w-7xl mx-auto px-8">
+    <h2 class="text-4xl font-bold text-center mb-16">
+      How We Can Help
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- Home Services -->
+      <div class="bg-gray-50 p-8 rounded-2xl border-t-4 border-orange-500">
+        <h3 class="text-2xl font-bold text-blue-700 mb-4">🔧 Home Services</h3>
+        <p class="text-gray-700 mb-4">
+          Dependable help from our family team for projects and repairs around your home.
+        </p>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Repairs & small projects</li>
+          <li>• Assembly & installation</li>
+          <li>• Mounting & fixtures</li>
+          <li>• General home help</li>
+        </ul>
+      </div>
+
+      <!-- Lawn Care -->
+      <div class="bg-gray-50 p-8 rounded-2xl border-t-4 border-green-500">
+        <h3 class="text-2xl font-bold text-green-700 mb-4">🌾 Lawn Care</h3>
+        <p class="text-gray-700 mb-4">
+          Reliable lawn care handled together, so your yard stays consistent week to week.
+        </p>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Mowing & edging</li>
+          <li>• Seasonal cleanup</li>
+          <li>• Yard maintenance</li>
+        </ul>
+      </div>
+
+      <!-- Media Services -->
+      <div class="bg-gray-50 p-8 rounded-2xl border-t-4 border-blue-500">
+        <h3 class="text-2xl font-bold text-blue-800 mb-4">📡 Media Services</h3>
+        <p class="text-gray-700 mb-4">
+          Media and home technology projects planned and handled together
+          to make sure everything works the way it should.
+        </p>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Wi-Fi & home networking</li>
+          <li>• Security cameras</li>
+          <li>• Home theater & TV setup</li>
+          <li>• Clean cable management</li>
+        </ul>
+        <a href="media.html" class="inline-block mt-4 text-orange-600 font-semibold">
+          See media projects →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-gray-900 text-white py-16">
+  <div class="max-w-lg mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-6 text-center">Get in Touch</h2>
+
+    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+
+      <input
+        class="w-full p-4 rounded text-gray-900"
+        name="name"
+        placeholder="Your Name"
+        required
+      >
+      <input
+        class="w-full p-4 rounded text-gray-900"
+        name="email"
+        placeholder="Email Address"
+        required
+      >
+      <textarea
+        class="w-full p-4 rounded text-gray-900"
+        name="message"
+        rows="4"
+        placeholder="How can we help?"
+        required
+      ></textarea>
+
+      <button
+        type="submit"
+        class="w-full bg-orange-500 hover:bg-orange-600
+               py-4 rounded font-bold transition"
+      >
+        Send Message
+      </button>
+
+      <p class="text-xs text-gray-400 text-center mt-4">
+        Local. Family-owned. You’ll hear back from one of us — not an automated system.
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER (Loaded via partial) -->
+<div id="footer"></div>
+
+<!-- PARTIAL LOADER + SITE JS -->
+<script>
+  async function loadPartial(id, file) {
+    const res = await fetch(file);
+    document.getElementById(id).innerHTML = await res.text();
+  }
+
+  async function initSite() {
+    await loadPartial('header', 'partials/header.html');
+    await loadPartial('footer', 'partials/footer.html');
+
+    // Mobile menu
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+
+    // Active nav (page-specific)
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.dataset.page === window.PAGE_ID) {
+        link.classList.add('active');
       }
+    });
 
-      async function initSite() {
-        await loadPartial("header", "partials/header.html");
-        await loadPartial("footer", "partials/footer.html");
+    // Sticky shadow
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header?.classList.toggle('shadow-md', window.scrollY > 10);
+    });
+  }
 
-        // Mobile menu
-        const btn = document.getElementById("menu-btn");
-        const menu = document.getElementById("mobile-menu");
-        if (btn && menu) {
-          btn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-          });
-        }
+  document.addEventListener('DOMContentLoaded', initSite);
+</script>
 
-        // Active nav
-        const path = location.pathname.split("/").pop() || "index.html";
-        document.querySelectorAll(".nav-link").forEach((link) => {
-          if (link.getAttribute("href") === path) {
-            link.classList.add("active");
-          }
-        });
-
-        // Sticky shadow
-        const header = document.getElementById("site-header");
-        window.addEventListener("scroll", () => {
-          header?.classList.toggle("shadow-md", window.scrollY > 10);
-        });
-      }
-
-      document.addEventListener("DOMContentLoaded", initSite);
-    </script>
-  </body>
+</body>
 </html>
