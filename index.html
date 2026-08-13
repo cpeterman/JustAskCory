@@ -3,216 +3,552 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Just Ask Cory | Your Local Helping Hand</title>
+    <title>Just Ask Cory | Home Tech Setup &amp; Troubleshooting</title>
+    <meta
+      name="description"
+      content="Local Wi‑Fi, home networks, computers, cameras, TVs, and smart-home setup and troubleshooting in Rockford, Greenfield, Delano, Hanover, and nearby towns."
+    />
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font -->
+    <link rel="stylesheet" href="assets/tailwind.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Favicons -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-
-    <style>
-      body {
-        font-family: Inter, sans-serif;
-      }
-      .nav-link {
-        color: #374151;
-        transition: color 0.2s ease;
-      }
-      .nav-link:hover {
-        color: #2563eb;
-      }
-      .nav-link.active {
-        color: #2563eb;
-        font-weight: 700;
-      }
-    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="assets/site.css" />
   </head>
 
   <body class="bg-gray-50 text-gray-900 overflow-x-hidden">
-    <!-- HEADER (Loaded via partial) -->
-    <div id="header"></div>
+    <header
+      id="site-header"
+      class="bg-white sticky top-0 z-50 border-b border-gray-200 transition-shadow"
+    >
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-5">
+          <img
+            src="assets/logos/logo-icon.png"
+            alt="Just Ask Cory"
+            class="w-20 h-20"
+          />
+          <div class="leading-tight">
+            <div class="font-extrabold text-2xl tracking-tight">
+              Just Ask <span class="text-orange-500">Cory</span>
+            </div>
+            <div class="text-base text-gray-500">
+              Home tech setup &amp; troubleshooting
+            </div>
+          </div>
+        </a>
 
-    <!-- HERO -->
-    <section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white overflow-hidden">
-      <div
-        class="w-full max-w-7xl mx-auto pl-4 pr-4 sm:px-6 lg:px-12 py-8 grid lg:grid-cols-2 gap-8 items-center text-center lg:text-left"
-      >
-        <!-- TEXT -->
-        <div class="flex flex-col items-center lg:items-start">
-          <h1
-            class="font-extrabold leading-tight mb-4 text-xl sm:text-2xl lg:text-3xl"
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+          <a href="#services" data-page="services" class="nav-link">Services</a>
+          <a href="#how-it-works" data-page="how-it-works" class="nav-link"
+            >How it works</a
           >
-            Need help around your home?
+          <a
+            href="#coming-soon"
+            class="ml-2 bg-gray-100 text-gray-700 px-6 py-2.5 rounded-full hover:bg-gray-200 transition"
+          >
+            Coming soon
+          </a>
+        </nav>
+
+        <button
+          id="menu-btn"
+          class="md:hidden w-11 h-11 rounded-lg hover:bg-gray-100 flex items-center justify-center"
+          aria-label="Open menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden hidden border-t bg-white">
+        <nav class="px-6 py-6 space-y-5 text-base font-semibold">
+          <a href="#services" data-page="services" class="block nav-link"
+            >Services</a
+          >
+          <a href="#how-it-works" data-page="how-it-works" class="block nav-link"
+            >How it works</a
+          >
+          <a
+            href="#coming-soon"
+            class="block text-center bg-gray-100 text-gray-700 py-3 rounded-full"
+          >
+            Coming soon
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="relative overflow-hidden text-white">
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-950 to-blue-700"></div>
+      <div class="absolute inset-0 hero-sparkles"></div>
+      <div
+        class="absolute -top-48 -left-48 w-[560px] h-[560px] rounded-full bg-sky-300/20 blur-3xl"
+      ></div>
+      <div
+        class="absolute -bottom-64 -right-64 w-[680px] h-[680px] rounded-full bg-cyan-200/18 blur-3xl"
+      ></div>
+
+      <div
+        class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-14 sm:py-16 grid gap-12 lg:gap-14 items-center text-center lg:grid-cols-5"
+      >
+        <div class="flex flex-col items-center hero-crisp lg:col-span-3">
+          <p
+            class="text-sky-100/95 text-xl sm:text-2xl lg:text-3xl font-semibold tracking-[0.04em] uppercase"
+          >
+            Wi‑Fi, computers, cameras, and more
+          </p>
+          <div
+            class="mt-5 h-1.5 w-24 rounded-full bg-gradient-to-r from-orange-300 to-sky-300"
+          ></div>
+          <h1
+            class="font-extrabold leading-[1.05] mt-7 text-4xl sm:text-5xl lg:text-6xl tracking-tight max-w-3xl"
+          >
+            Home tech that just works
           </h1>
 
-          <p class="text-blue-100 text-sm sm:text-lg lg:text-xl max-w-xl pb-4">
-            We're a local, family business happy to help.
+          <p class="text-white text-lg sm:text-xl max-w-2xl mt-6">
+            Local setup and troubleshooting for networks, devices, and modern
+            home tech—without the runaround.
           </p>
 
-          <p class="text-blue-200 text-sm sm:text-md max-w-xl pb-8">
-            Serving Rockford, Greenfield, Delano, Hanover, and surrounding towns.
+          <p class="text-white/85 text-base max-w-2xl mt-4">
+            Serving Rockford, Greenfield, Delano, Hanover, and nearby towns.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8">
             <a
               href="#services"
-              class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-full font-bold transition whitespace-nowrap"
-              >View Services</a
+              class="bg-orange-500 hover:bg-orange-400 px-7 py-3.5 rounded-full font-extrabold transition whitespace-nowrap soft-ring"
             >
+              Explore services
+            </a>
             <a
-              href="#contact"
-              class="border border-white/70 hover:bg-white hover:text-blue-700 px-6 py-3 rounded-full font-semibold transition whitespace-nowrap"
-              >Contact Cory</a
+              href="#coming-soon"
+              class="bg-white/16 hover:bg-white/24 ring-1 ring-white/35 px-7 py-3.5 rounded-full font-semibold transition whitespace-nowrap"
             >
+              Coming soon
+            </a>
           </div>
         </div>
 
-        <!-- LOGO -->
-        <div class="flex justify-center lg:justify-end">
+        <div class="flex justify-center lg:justify-end lg:col-span-2">
           <img
             src="assets/logos/logo.png"
             alt="Just Ask Cory Logo"
-            class="w-full max-w-[280px] sm:max-w-[380px] drop-shadow-xl rounded-lg"
+            class="w-full max-w-[220px] sm:max-w-[320px] lg:max-w-[360px] drop-shadow-2xl rounded-2xl ring-1 ring-white/25"
           />
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="py-10 bg-white">
-      <div class="max-w-7xl mx-auto pl-4 pr-4 sm:px-6">
-        <h2 class="text-3xl font-bold text-center mb-2">How We Can Help</h2>
-        <p class="text-gray-600 text-center mb-8 pt-2">
-          Local help for whatever you need - whether it's a project, some heavy lifting, or just an extra hand. We're here to help.
-        </p>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-gray-50 p-10 rounded-2xl border-t-4 border-orange-500">
-            <h3 class="text-xl font-bold text-blue-700 mb-3">Personal Help</h3>
-
-            <ul class="space-y-1 text-gray-600">
-              <li>• Errands and shopping</li>
-              <li>• Heavy lifting and carrying</li>
-              <li>• Technology help</li>
-              <li>• And more</li>
-            </ul>
-          </div>
-
-          <div class="bg-gray-50 p-10 rounded-2xl border-t-4 border-green-500">
-            <h3 class="text-xl font-bold text-green-700 mb-3">Outdoor Projects</h3>
-            <ul class="space-y-1 text-gray-600">
-              <li>• Yard cleanup</li>
-              <li>• Deck power washing</li>
-              <li>• Seasonal maintenance</li>
-              <li>• And more</li>
-            </ul>
-          </div>
-
-          <div class="bg-gray-50 p-10 rounded-2xl border-t-4 border-blue-500">
-            <h3 class="text-xl font-bold text-blue-800 mb-3">Home Projects</h3>
-            <ul class="space-y-1 text-gray-600">
-              <li>• Assembly</li>
-              <li>• Repairs, maintenance</li>
-              <li>• Garage organizing</li>
-              <li>• And more</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="py-14 bg-gray-50">
-      <div class="max-w-4xl mx-auto pl-4 pr-4 sm:px-6 text-center">
-        <h2 class="text-3xl font-bold mb-6">About Us</h2>
-        <p class="text-gray-700 text-lg">
-          We're your local neighbor ready to help. Whether you need a hand with yard work, garage organizing, technology help, or just someone to carry in heavy items - we're here for you.
-        </p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="bg-gray-800 text-white py-10">
-      <!-- Service Area SEO -->
-      <div class="sr-only">
-        Local home services, handyman services, and home technology in Rockford MN,
-        Greenfield MN, Loretto MN, Delano MN, Hanover MN, and Buffalo MN.
-      </div>
-      <div class="max-w-md mx-auto pl-4 pr-4 sm:px-6">
-        <h2 class="text-2xl font-bold text-center mb-4">Contact Cory</h2>
-        <p class="text-gray-300 text-center text-lg pt-2 mb-6">
-          ... coming soon ...
-        </p>
-
-        <form
-          action=""
-          method="POST"
-          class="space-y-3 hidden"
-        >
-          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
-
-          <input
-            class="w-full p-3 rounded text-gray-900"
-            name="name"
-            placeholder="Name"
-            required
-          />
-          <input
-            class="w-full p-3 rounded text-gray-900"
-            name="email"
-            placeholder="Email"
-            required
-          />
-          <textarea
-            class="w-full p-3 rounded text-gray-900"
-            name="message"
-            rows="3"
-            placeholder="How can we help?"
-            required
-          ></textarea>
-
-          <button
-            type="submit"
-            class="w-full bg-orange-500 hover:bg-orange-600 py-3 rounded font-bold transition"
-          >
-            Send Message
-          </button>
-
-          <p class="text-sm text-gray-300 text-center mt-4 pt-2">
-            Prefer to talk? Call or text
-            <span class="text-white font-semibold">(XXX) XXX-XXXX</span>
+    <section id="services" class="py-16 bg-white scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            Home tech help
+          </h2>
+          <p class="text-gray-600 text-lg mt-4">
+            Setup, cleanup, and troubleshooting for the tech that runs your
+            house—Wi‑Fi through cameras and everything in between.
           </p>
-        </form>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          <div class="shine-card bg-white rounded-3xl border border-gray-200 p-8 soft-ring">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center ring-1 ring-sky-200"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M5 15a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="M8 17.5a4 4 0 0 1 8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <circle cx="12" cy="20" r="1.25" fill="currentColor" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-extrabold text-gray-900">Wi‑Fi &amp; coverage</h3>
+            </div>
+            <p class="text-gray-600 mt-4">
+              Dead spots, slow rooms, and “it works everywhere except…”—we’ll
+              get the house covered.
+            </p>
+            <ul class="mt-5 space-y-2 text-gray-700">
+              <li class="flex gap-2"><span class="text-orange-600">•</span> Mesh and extender setup</li>
+              <li class="flex gap-2"><span class="text-orange-600">•</span> Router placement &amp; config</li>
+              <li class="flex gap-2"><span class="text-orange-600">•</span> Guest networks &amp; passwords</li>
+            </ul>
+          </div>
+
+          <div class="shine-card bg-white rounded-3xl border border-gray-200 p-8 soft-ring">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center ring-1 ring-blue-200"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2" />
+                  <path d="M7 10h4M7 14h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <circle cx="16" cy="12" r="1.5" fill="currentColor" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-extrabold text-gray-900">Home networks</h3>
+            </div>
+            <p class="text-gray-600 mt-4">
+              Wired and wireless networks that stay reliable for work, streaming,
+              and smart devices.
+            </p>
+            <ul class="mt-5 space-y-2 text-gray-700">
+              <li class="flex gap-2"><span class="text-blue-700">•</span> Switches, APs, and cabling</li>
+              <li class="flex gap-2"><span class="text-blue-700">•</span> ISP modem / router help</li>
+              <li class="flex gap-2"><span class="text-blue-700">•</span> Network cleanup &amp; labeling</li>
+            </ul>
+          </div>
+
+          <div class="shine-card bg-white rounded-3xl border border-gray-200 p-8 soft-ring">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center ring-1 ring-indigo-200"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="2" />
+                  <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-extrabold text-gray-900">Computers &amp; devices</h3>
+            </div>
+            <p class="text-gray-600 mt-4">
+              New computers, printers, phones, and tablets—set up cleanly and
+              connected to your network.
+            </p>
+            <ul class="mt-5 space-y-2 text-gray-700">
+              <li class="flex gap-2"><span class="text-indigo-700">•</span> PC / Mac setup &amp; transfer</li>
+              <li class="flex gap-2"><span class="text-indigo-700">•</span> Printers and peripherals</li>
+              <li class="flex gap-2"><span class="text-indigo-700">•</span> Updates, backups, basics</li>
+            </ul>
+          </div>
+
+          <div class="shine-card bg-white rounded-3xl border border-gray-200 p-8 soft-ring">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center ring-1 ring-emerald-200"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 9h11a3 3 0 0 1 3 3v7H7a3 3 0 0 1-3-3V9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                  <circle cx="9.5" cy="14" r="1.5" fill="currentColor" />
+                  <path d="M18 11.5 21 9v10l-3-2.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-extrabold text-gray-900">Security cameras</h3>
+            </div>
+            <p class="text-gray-600 mt-4">
+              Placement, mounting, apps, and recording—so you can actually see
+              what’s going on.
+            </p>
+            <ul class="mt-5 space-y-2 text-gray-700">
+              <li class="flex gap-2"><span class="text-emerald-700">•</span> Install &amp; mounting</li>
+              <li class="flex gap-2"><span class="text-emerald-700">•</span> App &amp; notification setup</li>
+              <li class="flex gap-2"><span class="text-emerald-700">•</span> Recording &amp; playback fixes</li>
+            </ul>
+          </div>
+
+          <div class="shine-card bg-white rounded-3xl border border-gray-200 p-8 soft-ring">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-2xl bg-orange-100 text-orange-700 flex items-center justify-center ring-1 ring-orange-200"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2" />
+                  <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-extrabold text-gray-900">TVs &amp; smart home</h3>
+            </div>
+            <p class="text-gray-600 mt-4">
+              TVs, streaming boxes, speakers, and smart devices that talk to
+              each other instead of fighting.
+            </p>
+            <ul class="mt-5 space-y-2 text-gray-700">
+              <li class="flex gap-2"><span class="text-orange-600">•</span> TV mounting &amp; inputs</li>
+              <li class="flex gap-2"><span class="text-orange-600">•</span> Streaming &amp; sound setup</li>
+              <li class="flex gap-2"><span class="text-orange-600">•</span> Smart speakers &amp; hubs</li>
+            </ul>
+          </div>
+
+          <div class="shine-card bg-white rounded-3xl border border-gray-200 p-8 soft-ring">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center ring-1 ring-rose-200"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" />
+                  <path d="M12 8v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <circle cx="12" cy="16" r="1" fill="currentColor" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-extrabold text-gray-900">Troubleshooting</h3>
+            </div>
+            <p class="text-gray-600 mt-4">
+              When something “just stopped working,” we’ll find it, fix it, and
+              explain it in plain English.
+            </p>
+            <ul class="mt-5 space-y-2 text-gray-700">
+              <li class="flex gap-2"><span class="text-rose-700">•</span> Intermittent Wi‑Fi &amp; dropouts</li>
+              <li class="flex gap-2"><span class="text-rose-700">•</span> Device pairing &amp; logins</li>
+              <li class="flex gap-2"><span class="text-rose-700">•</span> “Can you just look at this?”</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- FOOTER (Loaded via partial) -->
-    <div id="footer"></div>
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            Sound familiar?
+          </h2>
+          <p class="text-gray-600 text-lg mt-4">
+            Most visits start with one of these. If yours isn’t listed, ask
+            anyway.
+          </p>
+        </div>
 
-    <!-- PARTIAL LOADER + SITE JS -->
-    <script>
-      async function loadPartial(id, file) {
-        const res = await fetch(file);
-        document.getElementById(id).innerHTML = await res.text();
-      }
+        <div class="mt-10 grid md:grid-cols-2 gap-5">
+          <div class="shine-card bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="font-extrabold text-gray-900">“The Wi‑Fi dies in the basement.”</div>
+            <p class="text-gray-600 mt-2">Coverage check, better placement, mesh if you need it.</p>
+          </div>
+          <div class="shine-card bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="font-extrabold text-gray-900">“The cameras aren’t recording.”</div>
+            <p class="text-gray-600 mt-2">App, power, storage, and network—we’ll trace it down.</p>
+          </div>
+          <div class="shine-card bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="font-extrabold text-gray-900">“Can you set up this new computer?”</div>
+            <p class="text-gray-600 mt-2">Accounts, Wi‑Fi, printers, and moving files over.</p>
+          </div>
+          <div class="shine-card bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="font-extrabold text-gray-900">“The TV remote is a mystery.”</div>
+            <p class="text-gray-600 mt-2">Inputs, streaming apps, soundbar, and a simple remote layout.</p>
+          </div>
+          <div class="shine-card bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="font-extrabold text-gray-900">“Work-from-home video keeps freezing.”</div>
+            <p class="text-gray-600 mt-2">Stabilize the network so calls and uploads stay solid.</p>
+          </div>
+          <div class="shine-card bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="font-extrabold text-gray-900">“Nothing will connect to the printer.”</div>
+            <p class="text-gray-600 mt-2">Wireless printers, phones, and laptops on the same network.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      async function initSite() {
-        await loadPartial("header", "partials/header.html");
-        await loadPartial("footer", "partials/footer.html");
+    <section id="how-it-works" class="py-16 bg-white scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            How it works
+          </h2>
+          <p class="text-gray-600 text-lg mt-4">
+            No ticket system. Just a clear plan and a visit that actually
+            solves it—once booking opens.
+          </p>
+        </div>
 
-        const btn = document.getElementById("menu-btn");
-        const menu = document.getElementById("mobile-menu");
-        if (btn && menu)
-          btn.addEventListener("click", () => menu.classList.toggle("hidden"));
-      }
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+          <div class="bg-gray-50 border border-gray-200 rounded-3xl p-8">
+            <div class="text-sm font-extrabold text-orange-600 tracking-wide uppercase">
+              Step 1
+            </div>
+            <h3 class="text-xl font-extrabold mt-2">Send the details</h3>
+            <p class="text-gray-600 mt-3">
+              What’s broken or what you want set up, plus where you’re located.
+            </p>
+          </div>
+          <div class="bg-gray-50 border border-gray-200 rounded-3xl p-8">
+            <div class="text-sm font-extrabold text-orange-600 tracking-wide uppercase">
+              Step 2
+            </div>
+            <h3 class="text-xl font-extrabold mt-2">We reply fast</h3>
+            <p class="text-gray-600 mt-3">
+              We’ll confirm whether we can help, timing, and what to expect.
+            </p>
+          </div>
+          <div class="bg-gray-50 border border-gray-200 rounded-3xl p-8">
+            <div class="text-sm font-extrabold text-orange-600 tracking-wide uppercase">
+              Step 3
+            </div>
+            <h3 class="text-xl font-extrabold mt-2">We fix or set it up</h3>
+            <p class="text-gray-600 mt-3">
+              On-site help, careful with your home, and we leave it working.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      document.addEventListener("DOMContentLoaded", initSite);
-    </script>
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div class="bg-white border border-gray-200 rounded-3xl p-8 sm:p-10 soft-ring">
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              Local, careful, clear
+            </h2>
+            <p class="text-gray-700 text-lg mt-5">
+              Just Ask Cory is a local, family business. We show up, explain
+              what’s going on in plain language, and leave your tech in better
+              shape than we found it.
+            </p>
+            <p class="text-gray-700 text-lg mt-4">
+              No upsell circus—if it’s a simple fix, we’ll say so. If it’s
+              outside what we do, we’ll be honest about that too.
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="shine-card bg-white border border-gray-200 rounded-3xl p-7 soft-ring">
+              <div class="font-extrabold">Show up</div>
+              <div class="text-gray-600 mt-2">We confirm the plan, then we’re there.</div>
+            </div>
+            <div class="shine-card bg-white border border-gray-200 rounded-3xl p-7 soft-ring">
+              <div class="font-extrabold">Be careful</div>
+              <div class="text-gray-600 mt-2">Respectful in your home and with your gear.</div>
+            </div>
+            <div class="shine-card bg-white border border-gray-200 rounded-3xl p-7 soft-ring">
+              <div class="font-extrabold">Get it working</div>
+              <div class="text-gray-600 mt-2">Practical fixes, no overcomplicating.</div>
+            </div>
+            <div class="shine-card bg-white border border-gray-200 rounded-3xl p-7 soft-ring">
+              <div class="font-extrabold">Keep it simple</div>
+              <div class="text-gray-600 mt-2">Clear communication and fair expectations.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="coming-soon" class="py-20 sm:py-24 text-white relative overflow-hidden scroll-mt-24">
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-950 via-slate-950 to-slate-950"></div>
+      <div class="absolute inset-0 soon-grid"></div>
+      <div class="absolute inset-0 opacity-30 hero-sparkles"></div>
+      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[520px] h-[520px] rounded-full bg-orange-400/15 blur-3xl"></div>
+      <div class="absolute -bottom-40 -right-24 w-[420px] h-[420px] rounded-full bg-sky-400/15 blur-3xl"></div>
+      <div class="sr-only">
+        Home technology, Wi‑Fi, networking, computers, cameras, and smart home
+        help in Rockford MN, Greenfield MN, Loretto MN, Delano MN, Hanover MN,
+        and Buffalo MN.
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto rounded-[2rem] bg-white/10 ring-1 ring-white/15 backdrop-blur-sm overflow-hidden">
+          <div class="grid lg:grid-cols-[1.15fr_0.85fr]">
+            <div class="p-8 sm:p-12 lg:p-14">
+              <img
+                src="assets/logos/logo-icon.png"
+                alt=""
+                class="w-16 h-16 rounded-2xl ring-1 ring-white/20 bg-white/10"
+              />
+              <div class="mt-6 inline-flex items-center gap-2 rounded-full bg-orange-500/15 ring-1 ring-orange-300/30 px-3.5 py-1.5">
+                <span class="status-dot inline-block w-2 h-2 rounded-full bg-orange-400"></span>
+                <span class="text-xs font-extrabold tracking-[0.14em] uppercase text-orange-200">
+                  Coming soon
+                </span>
+              </div>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mt-5 leading-[1.08]">
+                Not accepting new clients yet
+              </h2>
+              <p class="text-white/80 text-lg mt-5 max-w-xl">
+                We’re getting things ready. Check back soon—booking will open
+                when we’re set to take on new home tech work.
+              </p>
+              <div class="mt-8 flex flex-wrap gap-2">
+                <span class="rounded-full bg-white/10 ring-1 ring-white/15 px-3 py-1.5 text-sm text-white/85">Rockford</span>
+                <span class="rounded-full bg-white/10 ring-1 ring-white/15 px-3 py-1.5 text-sm text-white/85">Greenfield</span>
+                <span class="rounded-full bg-white/10 ring-1 ring-white/15 px-3 py-1.5 text-sm text-white/85">Delano</span>
+                <span class="rounded-full bg-white/10 ring-1 ring-white/15 px-3 py-1.5 text-sm text-white/85">Hanover</span>
+                <span class="rounded-full bg-white/10 ring-1 ring-white/15 px-3 py-1.5 text-sm text-white/85">Nearby towns</span>
+              </div>
+            </div>
+
+            <div class="bg-white/5 ring-1 ring-white/10 lg:ring-0 lg:border-l border-white/10 p-8 sm:p-12 lg:p-14">
+              <p class="text-xs font-extrabold tracking-[0.16em] uppercase text-sky-200/90">
+                What’s coming
+              </p>
+              <ul class="mt-6 space-y-4">
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 w-9 h-9 rounded-xl bg-sky-400/15 text-sky-200 ring-1 ring-sky-200/20 flex items-center justify-center shrink-0">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M5 15a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      <path d="M8 17.5a4 4 0 0 1 8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      <circle cx="12" cy="20" r="1.25" fill="currentColor" />
+                    </svg>
+                  </span>
+                  <div>
+                    <div class="font-extrabold">Wi‑Fi &amp; networks</div>
+                    <div class="text-white/70 text-sm mt-0.5">Coverage, routers, and reliable home internet</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 w-9 h-9 rounded-xl bg-indigo-400/15 text-indigo-200 ring-1 ring-indigo-200/20 flex items-center justify-center shrink-0">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="2" />
+                      <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <div>
+                    <div class="font-extrabold">Computers &amp; devices</div>
+                    <div class="text-white/70 text-sm mt-0.5">Setup, printers, and everyday troubleshooting</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 w-9 h-9 rounded-xl bg-emerald-400/15 text-emerald-200 ring-1 ring-emerald-200/20 flex items-center justify-center shrink-0">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M4 9h11a3 3 0 0 1 3 3v7H7a3 3 0 0 1-3-3V9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                      <circle cx="9.5" cy="14" r="1.5" fill="currentColor" />
+                      <path d="M18 11.5 21 9v10l-3-2.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div>
+                    <div class="font-extrabold">Cameras &amp; security</div>
+                    <div class="text-white/70 text-sm mt-0.5">Mounting, apps, and recording that actually works</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 w-9 h-9 rounded-xl bg-orange-400/15 text-orange-200 ring-1 ring-orange-200/20 flex items-center justify-center shrink-0">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="3" y="5" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2" />
+                      <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <div>
+                    <div class="font-extrabold">TVs &amp; smart home</div>
+                    <div class="text-white/70 text-sm mt-0.5">Mounts, streaming, speakers, and clean setups</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-black text-gray-500 text-center py-6 text-sm">
+      © 2026 Just Ask Cory. Home tech, family-owned, and local.
+    </footer>
+
+    <script src="assets/site.js"></script>
   </body>
 </html>
