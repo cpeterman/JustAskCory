@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just Ask Cory | Your Local Helping Hand</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <style>
+      body {
+        font-family: Inter, sans-serif;
+      }
+      .nav-link {
+        color: #374151;
+        transition: color 0.2s ease;
+      }
+      .nav-link:hover {
+        color: #2563eb;
+      }
+      .nav-link.active {
+        color: #2563eb;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 overflow-x-hidden">
+    <!-- HEADER (Loaded via partial) -->
+    <div id="header"></div>
+
+    <!-- HERO -->
+    <section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white overflow-hidden">
+      <div
+        class="w-full max-w-7xl mx-auto pl-4 pr-4 sm:px-6 lg:px-12 py-8 grid lg:grid-cols-2 gap-8 items-center text-center lg:text-left"
+      >
+        <!-- TEXT -->
+        <div class="flex flex-col items-center lg:items-start">
+          <h1
+            class="font-extrabold leading-tight mb-4 text-xl sm:text-2xl lg:text-3xl"
+          >
+            Need help around your home?
+          </h1>
+
+          <p class="text-blue-100 text-sm sm:text-lg lg:text-xl max-w-xl pb-4">
+            We're a local, family business happy to help.
+          </p>
+
+          <p class="text-blue-200 text-sm sm:text-md max-w-xl pb-8">
+            Serving Rockford, Greenfield, Delano, Hanover, and surrounding towns.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a
+              href="#services"
+              class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-full font-bold transition whitespace-nowrap"
+              >View Services</a
+            >
+            <a
+              href="#contact"
+              class="border border-white/70 hover:bg-white hover:text-blue-700 px-6 py-3 rounded-full font-semibold transition whitespace-nowrap"
+              >Contact Cory</a
+            >
+          </div>
+        </div>
+
+        <!-- LOGO -->
+        <div class="flex justify-center lg:justify-end">
+          <img
+            src="assets/logos/logo.png"
+            alt="Just Ask Cory Logo"
+            class="w-full max-w-[280px] sm:max-w-[380px] drop-shadow-xl rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto pl-4 pr-4 sm:px-6">
+        <h2 class="text-3xl font-bold text-center mb-2">How We Can Help</h2>
+        <p class="text-gray-600 text-center mb-8 pt-2">
+          Local help for whatever you need - whether it's a project, some heavy lifting, or just an extra hand. We're here to help.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-10 rounded-2xl border-t-4 border-orange-500">
+            <h3 class="text-xl font-bold text-blue-700 mb-3">Personal Help</h3>
+
+            <ul class="space-y-1 text-gray-600">
+              <li>• Errands and shopping</li>
+              <li>• Heavy lifting and carrying</li>
+              <li>• Technology help</li>
+              <li>• And more</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 p-10 rounded-2xl border-t-4 border-green-500">
+            <h3 class="text-xl font-bold text-green-700 mb-3">Outdoor Projects</h3>
+            <ul class="space-y-1 text-gray-600">
+              <li>• Yard cleanup</li>
+              <li>• Deck power washing</li>
+              <li>• Seasonal maintenance</li>
+              <li>• And more</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 p-10 rounded-2xl border-t-4 border-blue-500">
+            <h3 class="text-xl font-bold text-blue-800 mb-3">Home Projects</h3>
+            <ul class="space-y-1 text-gray-600">
+              <li>• Assembly</li>
+              <li>• Repairs, maintenance</li>
+              <li>• Garage organizing</li>
+              <li>• And more</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="py-14 bg-gray-50">
+      <div class="max-w-4xl mx-auto pl-4 pr-4 sm:px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">About Us</h2>
+        <p class="text-gray-700 text-lg">
+          We're your local neighbor ready to help. Whether you need a hand with yard work, garage organizing, technology help, or just someone to carry in heavy items - we're here for you.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-gray-800 text-white py-10">
+      <!-- Service Area SEO -->
+      <div class="sr-only">
+        Local home services, handyman services, and home technology in Rockford MN,
+        Greenfield MN, Loretto MN, Delano MN, Hanover MN, and Buffalo MN.
+      </div>
+      <div class="max-w-md mx-auto pl-4 pr-4 sm:px-6">
+        <h2 class="text-2xl font-bold text-center mb-4">Contact Cory</h2>
+        <p class="text-gray-300 text-center text-lg pt-2 mb-6">
+          ... coming soon ...
+        </p>
+
+        <form
+          action=""
+          method="POST"
+          class="space-y-3 hidden"
+        >
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
+
+          <input
+            class="w-full p-3 rounded text-gray-900"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            class="w-full p-3 rounded text-gray-900"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            class="w-full p-3 rounded text-gray-900"
+            name="message"
+            rows="3"
+            placeholder="How can we help?"
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            class="w-full bg-orange-500 hover:bg-orange-600 py-3 rounded font-bold transition"
+          >
+            Send Message
+          </button>
+
+          <p class="text-sm text-gray-300 text-center mt-4 pt-2">
+            Prefer to talk? Call or text
+            <span class="text-white font-semibold">(XXX) XXX-XXXX</span>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER (Loaded via partial) -->
+    <div id="footer"></div>
+
+    <!-- PARTIAL LOADER + SITE JS -->
+    <script>
+      async function loadPartial(id, file) {
+        const res = await fetch(file);
+        document.getElementById(id).innerHTML = await res.text();
+      }
+
+      async function initSite() {
+        await loadPartial("header", "partials/header.html");
+        await loadPartial("footer", "partials/footer.html");
+
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+        if (btn && menu)
+          btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+      }
+
+      document.addEventListener("DOMContentLoaded", initSite);
+    </script>
+  </body>
+</html>
